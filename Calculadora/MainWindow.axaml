@@ -1,0 +1,48 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="500"
+        x:Class="Calculadora.MainWindow"
+        Title="Calculadora"
+        Height="500"
+        Width="500"
+        MinHeight="500"
+        MaxHeight="500"
+        MaxWidth="500"
+        MinWidth="500"
+        WindowStartupLocation="CenterScreen"
+        Background="#1F4492">
+        <Grid Margin="20" RowDefinitions="Auto,Auto,*,Auto,Auto" RowSpacing="10" >
+            <TextBox Grid.Row="0" Height="110" x:Name="Pantalla" IsReadOnly="True"/>
+            <UniformGrid Grid.Row="1" Columns="4">
+                <Button Content="+" Classes="operador" Click="Operador_Click"/>
+                <Button Content="-" Classes="operador" Click="Operador_Click"/>
+                <Button Content="x" Classes="operador" Click="Operador_Click"/>
+                <Button Content="/" Classes="operador" Click="Operador_Click"/>
+            </UniformGrid>
+            <Grid Grid.Row="2" ColumnDefinitions="3*,*">
+                <UniformGrid Grid.Column="0" Columns="3" Rows="4">
+                    <Button Content="7" Click="Numero_Click"/>
+                    <Button Content="8" Click="Numero_Click"/>
+                    <Button Content="9" Click="Numero_Click"/>
+                    <Button Content="4" Click="Numero_Click"/>
+                    <Button Content="5" Click="Numero_Click"/>
+                    <Button Content="6" Click="Numero_Click"/>
+                    <Button Content="1" Click="Numero_Click"/>
+                    <Button Content="2" Click="Numero_Click"/>
+                    <Button Content="3" Click="Numero_Click"/>
+                    <Button Content="" IsEnabled="False"/>
+                    <Button Content="0" Click="Numero_Click"/>
+                    <Button Content="" IsEnabled="False"/>
+                </UniformGrid>
+                <UniformGrid Grid.Column="1" Columns="1" Rows="3">
+                    <Button Content="C" Classes="especial" Click="Limpiar_Click"/>
+                    <Button Content="CE" Classes="especial" Click="Borrar_Click"/>
+                    <Button Content="." Classes="especial" Click="Decimal_Click"/>
+                </UniformGrid>
+            </Grid>
+            <Button Grid.Row="3" Content="=" Classes="igual" Height="45" HorizontalAlignment="Stretch" Click="Calcular_Click"/>
+            <TextBlock Grid.Row="4" Text="Creado por Francisco Rodríguez Olías" Foreground="white" FontSize="12" HorizontalAlignment="Center" Margin="0,5,0,0"/>
+        </Grid>
+</Window>
