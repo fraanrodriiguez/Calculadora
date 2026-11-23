@@ -11,6 +11,7 @@
         MaxHeight="500"
         MaxWidth="500"
         MinWidth="500"
+        KeyDown="Window_KeyDown"
         WindowStartupLocation="CenterScreen"
         Background="#1F4492">
         <Grid Margin="20" RowDefinitions="Auto,Auto,*,Auto,Auto" RowSpacing="10" >
@@ -22,19 +23,19 @@
                 <Button Content="/" Classes="operador" Click="Operador_Click"/>
             </UniformGrid>
             <Grid Grid.Row="2" ColumnDefinitions="3*,*">
-                <UniformGrid Grid.Column="0" Columns="3" Rows="4">
-                    <Button Content="7" Click="Numero_Click"/>
-                    <Button Content="8" Click="Numero_Click"/>
-                    <Button Content="9" Click="Numero_Click"/>
-                    <Button Content="4" Click="Numero_Click"/>
-                    <Button Content="5" Click="Numero_Click"/>
-                    <Button Content="6" Click="Numero_Click"/>
-                    <Button Content="1" Click="Numero_Click"/>
-                    <Button Content="2" Click="Numero_Click"/>
-                    <Button Content="3" Click="Numero_Click"/>
-                    <Button Content="" IsEnabled="False"/>
-                    <Button Content="0" Click="Numero_Click"/>
-                    <Button Content="" IsEnabled="False"/>
+                <UniformGrid Grid.Column="0" Columns="3" Rows="4" ColumnSpacing="1">
+                    <Button Content="7" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="8" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="9" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="4" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="5" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="6" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="1" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="2" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="3" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="" IsEnabled="False" Classes="numero"/>
+                    <Button Content="0" Click="Numero_Click" Classes="numero"/>
+                    <Button Content="" IsEnabled="False" Classes="numero"/>
                 </UniformGrid>
                 <UniformGrid Grid.Column="1" Columns="1" Rows="3">
                     <Button Content="C" Classes="especial" Click="Limpiar_Click"/>
